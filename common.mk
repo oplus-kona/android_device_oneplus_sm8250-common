@@ -96,7 +96,7 @@ $(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64
+    android.hardware.camera.provider@2.4-service_64 \
     libcamera_metadata_shim \
     libcamera2ndk_vendor \
     libstdc++_vendor \
@@ -268,12 +268,6 @@ PRODUCT_PACKAGES += \
     OPlusSystemUIResCommon \
     WifiResTarget
 
-# Oplus-fwk
-PRODUCT_PACKAGES += \
-    oplus-fwk
-
-PRODUCT_BOOT_JARS += \
-    oplus-fwk
 
 # Partitions
 PRODUCT_PACKAGES += \
