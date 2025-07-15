@@ -5,6 +5,8 @@
 #
 
 COMMON_PATH := device/oneplus/sm8250-common
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -53,6 +55,10 @@ TARGET_BOOTLOADER_BOARD_NAME := kona
 
 # Display
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
+
+# Camera
+$(call soong_config_set_bool,camera,override_format_from_reserved,true)
+TARGET_USES_OPLUS_CAMERA := true
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
