@@ -8,9 +8,6 @@
     <!-- Whether device supports MSM Touchboost -->
     <bool name="config_deviceSupportsTouchboost">true</bool>
 
-    <!-- Whether device supports Ambient Display Gestures -->
-    <bool name="config_deviceSupportsAmbientDisplayGestures">true</bool>
-
     <!-- Whether device supports High Brightness Mode -->
     <bool name="config_deviceSupportsHBM">true</bool>
 
