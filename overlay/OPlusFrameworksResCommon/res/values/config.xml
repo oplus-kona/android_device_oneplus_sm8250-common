@@ -153,4 +153,14 @@
          keyboard vibration will follow config_defaultHapticFeedbackIntensity -->
     <integer name="config_defaultKeyboardVibrationIntensity">3</integer>
 
+    <!-- Flag indicating whether the surfaceflinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha transformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
+
+    <!-- Flag indicating whether the surface flinger is inefficient
+         at performing a blur. -->
+    <bool name="config_sf_slowBlur">false</bool>
+
 </resources>
