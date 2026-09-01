@@ -75,11 +75,6 @@
         <library name="volume_listener" path="libvolumelistener.so"/>
         <library name="audiosphere" path="libasphere.so"/>
         <library name="quasar" path="libquasar.so"/>
-        <!-- DOLBY START -->
-        <library name="dap_sw" path="libswdap_v3_6.so"/>
-        <library name="dap_hw" path="libhwdap_v3_6.so"/>
-        <library name="vqe" path="libswvqe_v3_6.so"/>
-        <!-- DOLBY END -->
     </libraries>
     <effects>
         <effectProxy name="bassboost" library="proxy" uuid="14804144-a5ee-4d24-aa88-0002a5d5c51b">
@@ -128,13 +123,6 @@
         <effect name="notification_helper" library="volume_listener" uuid="0b776dde-0590-11e5-81ba-0025b32654a0"/>
         <effect name="audiosphere" library="audiosphere" uuid="184e62ab-2d19-4364-9d1b-c0a40733866c"/>
         <effect name="quasar" library="quasar" uuid="71d0e2ee-e44d-483d-a809-09e75ee55ecd"/>
-        <!-- DOLBY START -->
-        <effectProxy name="dap" library="proxy" uuid="9d4921da-8225-4f29-aefa-39537a04bcaa">
-            <libsw library="dap_sw" uuid="6ab06da4-c516-4611-8166-452799218539"/>
-            <libhw library="dap_hw" uuid="a0c30891-8246-4aef-b8ad-d53e26da0253"/>
-        </effectProxy>
-        <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
-        <!-- DOLBY END -->
     </effects>
     <postprocess>
         <!--stream type="music">
