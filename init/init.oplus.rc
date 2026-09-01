@@ -97,7 +97,8 @@ on property:sys.boot_completed=1
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-958228818.pfm
 
 on property:vendor.post_boot.parsed=1
-
+    # Adrenoboost for smooth 120Hz UI and blur transitions
+    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
 
     # IRQ Tuning
     # IRQ 300: msm_drm
