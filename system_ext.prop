@@ -9,7 +9,9 @@ persist.bluetooth.bqr.min_interval_ms=60000
 
 # Display
 debug.sf.enable_hwc_vds=1
-debug.sf.latch_unsignaled=1
+debug.sf.latch_unsignaled=0
+persist.sys.sf.color_saturation=1.0
+renderthread.skia.reduceopstasksplitting=true
 
 # CNE
 persist.vendor.cne.feature=1
