@@ -56,6 +56,9 @@ on property:ro.boot.prjname=*
     setprop ro.separate.soft ${ro.boot.prjname}
 
 on property:sys.boot_completed=1
+    # Power HAL
+    setprop vendor.powerhal.init 1
+
     # Display
     copy /vendor/etc/OPlus_QC_LTM_Commercial_SM8250_2020_02_07.pfm /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-958228818.pfm
     copy /vendor/etc/Oppo_QC_LTM_Commercial_SM8250_2020_01_15.pfm /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-1186717196.pfm
@@ -63,6 +66,9 @@ on property:sys.boot_completed=1
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-958228818.pfm
 
 on property:vendor.post_boot.parsed=1
+    # Power HAL
+    setprop vendor.powerhal.init 1
+
     # Adrenoboost for smooth 120Hz UI and blur transitions
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
 
