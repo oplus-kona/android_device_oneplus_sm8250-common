@@ -28,6 +28,7 @@ persist.vendor.dpm.feature=9
 persist.backup.ntpServer=0.pool.ntp.org
 
 # IMS
+persist.dbg.ims_volte_enable=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
@@ -43,6 +44,17 @@ persist.data.df.agg.dl_size=4096
 persist.vendor.data.mode=concurrent
 
 # Radio
+persist.data.iwlan.enable=true
+persist.data.iwlan=1
+persist.data.iwlan.ipsec.ap=1
+persist.radio.calls.on.ims=1
+persist.radio.data_con_rprt=1
+persist.radio.data_ltd_sys_ind=1
+persist.radio.rat_on=combine
+persist.radio.volte.dan_support=true
+persist.radio.VT_ENABLE=1
+persist.rcs.supported=1
+persist.sys.cust.lte_config=true
 ril.subscription.types=NV,RUIM
 
 # Sensors
