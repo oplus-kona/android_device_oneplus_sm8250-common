@@ -251,9 +251,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
-# OPlusExtras
-PRODUCT_PACKAGES += \
-    OPlusExtras \
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
@@ -284,9 +281,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service.lineage-libperfmgr
 
-$(call soong_config_set,qtipower,tap_to_wake_node,/proc/touchpanel/double_tap_enable)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -310,7 +308,12 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/oplus
+    hardware/oplus \
+    hardware/google/interfaces \
+    hardware/google/pixel/pixelstats \
+    hardware/google/pixel/power-libperfmgr \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -415,11 +418,6 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
-# Inherit from the OnePlus Camera makefile.
-$(call inherit-product, vendor/oneplus/camera/camera-vendor.mk)
-
-# GameBar Performance Overlay
-$(call inherit-product, packages/apps/GameBar/gamebar.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
