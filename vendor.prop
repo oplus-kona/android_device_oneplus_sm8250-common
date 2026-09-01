@@ -167,6 +167,25 @@ persist.sys.fuse.passthrough.enable=true
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
+debug.sf.early.app.duration.120=11666666
+debug.sf.early.app.duration.60=16666666
+debug.sf.early.app.duration=13666666
+debug.sf.early.sf.duration.120=12333333
+debug.sf.early.sf.duration.60=15666666
+debug.sf.early.sf.duration=10500000
+debug.sf.earlyGl.app.duration.120=11666666
+debug.sf.earlyGl.app.duration.60=16666666
+debug.sf.earlyGl.app.duration=13666666
+debug.sf.earlyGl.sf.duration.120=12333333
+debug.sf.earlyGl.sf.duration.60=15666666
+debug.sf.earlyGl.sf.duration=10500000
+debug.sf.late.app.duration.120=11666666
+debug.sf.late.app.duration.60=16666666
+debug.sf.late.app.duration=13666666
+debug.sf.late.sf.duration.120=12333333
+debug.sf.late.sf.duration.60=15666666
+debug.sf.late.sf.duration=10500000
+debug.sf.use_phase_offsets_as_durations=1
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
