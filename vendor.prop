@@ -135,6 +135,7 @@ vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_scaler=0
 vendor.display.disable_system_load_check=1
+vendor.display.enable_allow_idle_fallback=1
 vendor.display.enable_async_powermode=1
 vendor.display.enable_camera_smooth=1
 vendor.display.enable_null_display=0
