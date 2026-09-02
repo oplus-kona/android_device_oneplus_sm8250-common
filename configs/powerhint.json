@@ -336,6 +336,48 @@
       "Value": "1"
     },
     {
+      "PowerHint": "LOW_POWER",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 0,
+      "Value": "710400"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "CPUBigPlusClusterMaxFreq",
+      "Duration": 0,
+      "Value": "844800"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 0,
+      "Value": "883200"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "GPUMaxFreq",
+      "Duration": 0,
+      "Value": "6"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "GPUIdleTimer",
+      "Duration": 0,
+      "Value": "10"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "CPUBWMinFreq",
+      "Duration": 0,
+      "Value": "2288"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "LLCCBWMinFreq",
+      "Duration": 0,
+      "Value": "762"
+    },
+    {
       "PowerHint": "DISPLAY_INACTIVE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
