@@ -72,4 +72,10 @@
      <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
      <bool name="config_telephony5gNonStandalone">true</bool>
 
+    <!-- Whether to enable fp unlock when screen turns off on udfps devices -->
+    <bool name="config_screen_off_udfps_enabled">true</bool>
+
+    <!-- Default value for fp screen off unlock toggle (set to true to enable by default) -->
+    <bool name="config_screen_off_udfps_default_on">false</bool>
+
 </resources>
