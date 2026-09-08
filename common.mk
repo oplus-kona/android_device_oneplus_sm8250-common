@@ -402,3 +402,6 @@ PRODUCT_PACKAGES += \
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
+
+# Parts
+$(call inherit-product-if-exists, packages/apps/OnePlusParts/parts.mk)
