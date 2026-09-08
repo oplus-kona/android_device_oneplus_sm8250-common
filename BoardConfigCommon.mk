@@ -139,6 +139,8 @@ include device/lineage/sepolicy/libion/sepolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += packages/apps/OnePlusParts/sepolicy/private
+
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
