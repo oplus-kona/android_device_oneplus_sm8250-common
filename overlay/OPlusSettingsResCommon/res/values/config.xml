@@ -53,4 +53,13 @@
     <!-- Show battery cycle count -->
     <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
 
+    <!-- Custom battery sysfs nodes for OnePlus SM8250 -->
+    <string name="config_battery_cycle_count_node" translatable="false">/sys/class/oplus_chg/battery/battery_cc</string>
+    <string name="config_battery_maximum_capacity_node" translatable="false">/sys/class/oplus_chg/battery/battery_fcc</string>
+    <string name="config_battery_design_capacity_node" translatable="false">/sys/class/oplus_chg/battery/design_capacity</string>
+    <string name="config_battery_voltage_node" translatable="false">/sys/class/power_supply/battery/voltage_now</string>
+    <string name="config_battery_temperature_node" translatable="false">/sys/class/power_supply/battery/temp</string>
+    <string name="config_battery_health_node" translatable="false">/sys/class/oplus_chg/battery/battery_soh</string>
+    <string name="config_battery_technology_node" translatable="false">/sys/class/power_supply/battery/technology</string>
+
 </resources>
