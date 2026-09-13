@@ -87,7 +87,7 @@ on property:vendor.post_boot.parsed=1
     setprop vendor.powerhal.init 1
 
     # Adrenoboost for smooth 120Hz UI and blur transitions
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
+    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
 
     # IRQ Tuning
     # IRQ 300: msm_drm
