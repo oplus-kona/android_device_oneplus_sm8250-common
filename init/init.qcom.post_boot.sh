@@ -837,9 +837,7 @@ function configure_zram_parameters() {
         let zRamSizeMB=4096
     fi
 
-    if [ "$low_ram" == "true" ]; then
-        echo lz4 > /sys/block/zram0/comp_algorithm
-    fi
+    echo lz4 > /sys/block/zram0/comp_algorithm
 
     if [ -f /sys/block/zram0/disksize ]; then
         if [ -f /sys/block/zram0/use_dedup ]; then
@@ -856,6 +854,7 @@ function configure_zram_parameters() {
             echo 0 > /sys/kernel/slab/zspage/store_user
         fi
 
+        echo 0 > /proc/sys/vm/page-cluster
         mkswap /dev/block/zram0
         swapon /dev/block/zram0 -p 32758
     fi
