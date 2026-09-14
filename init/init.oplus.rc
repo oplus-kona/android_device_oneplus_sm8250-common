@@ -82,6 +82,11 @@ on property:sys.boot_completed=1
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-1186717196.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-958228818.pfm
 
+    # Fast deep sleep and LPM prediction
+    write /sys/power/pm_async 1
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    write /sys/module/lpm_levels/parameters/lpm_prediction 1
+
 on property:vendor.post_boot.parsed=1
     # Power HAL
     setprop vendor.powerhal.init 1
