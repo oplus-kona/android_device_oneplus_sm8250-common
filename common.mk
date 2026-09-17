@@ -204,6 +204,7 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
     av \
     init \
     overlay \
