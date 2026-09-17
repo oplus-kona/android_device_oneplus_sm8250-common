@@ -1,0 +1,11 @@
+//
+// Copyright (C) 2021-2024 Paranoid Android
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "AOSPAOnePlusKonaSystemUIOverlay",
+    sdk_version: "current",
+    device_specific: true,
+}

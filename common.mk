@@ -275,6 +275,8 @@ $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
+    AOSPAOnePlusKonaFrameworksOverlay \
+    AOSPAOnePlusKonaSystemUIOverlay \
     CarrierConfigResCommon \
     FrameworksResTarget \
     NcmTetheringOverlay \
