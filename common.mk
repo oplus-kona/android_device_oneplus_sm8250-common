@@ -127,6 +127,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+PRODUCT_ODM_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1
+
 $(call soong_config_set,qtidisplay,target_uses_tp10_ubwc_for_10bit,true)
 
 # DRM
@@ -146,6 +149,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
+
+# FUSE
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.fuse.passthrough.enable=true
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -180,6 +187,10 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# Incremental FS
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.incremental.enable=1
+
 # Init
 PRODUCT_PACKAGES += \
     init.oplus.hw.rc \
@@ -210,12 +221,35 @@ $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.oplus
 
+# Logging
+SPAMMY_LOG_TAGS := \
+    SDM \
+    SDM-histogram \
+    SRE \
+    WifiHAL \
+    cnss-daemon \
+    sensors \
+    sensors-hal \
+    vendor.qti.bluetooth@1.0-ibs_handler \
+    vendor.qti.bluetooth@1.0-wake_lock \
+    vendor.qti.hardware.display.composer-service
+
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_VENDOR_PROPERTIES += \
+    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=E)
+endif
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     $(LOCAL_PATH)/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     $(LOCAL_PATH)/media/media_codecs_performance_kona_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kona.xml \
     $(LOCAL_PATH)/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs.json
+
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.stagefright.c2inputsurface=-1 \
+    ro.mediaserver.64b.enable=true \
+    vendor.media.omx=0
 
 $(call soong_config_set_bool,stagefright,target_disable_thumbnail_block_model,true)
 
