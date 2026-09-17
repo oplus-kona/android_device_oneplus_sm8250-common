@@ -182,24 +182,18 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.class_main.sh \
     init.oplus.hw.rc \
     init.oplus.hw.recovery.rc \
     init.oplus.rc \
     init.oplus.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.recovery.rc \
-    init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
-    init.qti.media.sh \
     init.target.rc \
-    ueventd.oplus.rc \
-    ueventd.qcom.rc
+    ueventd.oplus.rc
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
+
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := \
+    init
 
 # Lineage Health
 PRODUCT_PACKAGES += \
