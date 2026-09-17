@@ -5,12 +5,7 @@
 
 soong_namespace {
     imports: [
-        "hardware/google/interfaces",
-        "hardware/google/pixel",
-        "hardware/lineage/interfaces/power-libperfmgr",
         "hardware/oplus",
-        "hardware/qcom-caf/common/libqti-perfd-client",
-        "vendor/qcom/opensource/usb/etc",
     ],
 }
 

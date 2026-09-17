@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Add common definitions for Qualcomm
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
-
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -93,8 +90,6 @@ BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
-
-$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -245,9 +240,6 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
@@ -354,9 +346,6 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti \
     android.hardware.usb.gadget-service.qti \
     oplus_usb_compositions.conf
-
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/qcom/opensource/usb/etc
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
