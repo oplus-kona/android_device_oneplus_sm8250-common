@@ -91,6 +91,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig vendor/oplus.config
+KERNEL_DEFCONFIG := vendor/kona-perf_defconfig
+KERNEL_FRAGMENT_CONFIG := vendor/oplus.config
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -131,8 +133,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2024-10-05
 
 # SEPolicy
-include device/lineage/sepolicy/libion/sepolicy.mk
-include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += packages/apps/OnePlusParts/sepolicy/private
