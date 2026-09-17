@@ -207,6 +207,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     av \
     init \
+    media \
     overlay \
     perf \
     telephony \
