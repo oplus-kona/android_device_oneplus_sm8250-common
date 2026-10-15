@@ -14,6 +14,7 @@ persist.bluetooth.bqr.min_interval_ms=60000
 log.tag.CHIUSECASE=ERROR
 
 # Display
+debug.hwui.skia_atrace_enabled=false
 debug.hwui.use_hint_manager=true
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=0
