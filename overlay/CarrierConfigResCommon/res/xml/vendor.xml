@@ -3561,6 +3561,10 @@
             		<item value="1" />
             		<item value="2" />
         	</int-array>
+        <boolean name="carrier_disable_sa_mode_bool" value="false" />
+        <boolean name="carrier_disable_5g_switch_bool" value="false" />
+        <boolean name="config_show_vonr_icon_in_statusbar" value="true" />
+        <boolean name="vonr_enabled_bool" value="true" />
     </carrier_config>
     <carrier_config operator="AIRTEL">
         <boolean name="carrier_volte_available_bool" value="true" />
