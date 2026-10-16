@@ -106,7 +106,7 @@ TARGET_BOARD_PLATFORM := kona
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
--include vendor/clover/config/BoardConfigReservedSize.mk
+-include vendor/lineage/config/BoardConfigReservedSize.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 100663296
@@ -138,8 +138,8 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2024-10-05
 
 # SEPolicy
-include device/clover/sepolicy/libion/sepolicy.mk
-include device/clover/sepolicy/libperfmgr/sepolicy.mk
+include device/lineage/sepolicy/libion/sepolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
