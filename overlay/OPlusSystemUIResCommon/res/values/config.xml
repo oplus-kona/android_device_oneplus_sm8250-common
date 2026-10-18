@@ -12,6 +12,9 @@
      <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
      <integer name="config_keyguardMaxRefreshRate">60</integer>
 
+     <!-- Color of the UDFPS Pressed view -->
+     <color name="config_udfpsColor">#ffffe6</color>
+
      <!-- SystemUI Plugins that can be loaded on user builds. -->
      <string-array name="config_pluginAllowlist" translatable="false">
          <item>com.android.systemui</item>
