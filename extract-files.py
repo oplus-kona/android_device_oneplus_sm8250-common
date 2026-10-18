@@ -32,6 +32,7 @@ namespace_imports = [
     'vendor/qcom/common/system/wfd',
     'vendor/qcom/common/vendor/adreno/r',
     'vendor/qcom/common/vendor/display',
+    'vendor/qcom/common/vendor/gps-legacy',
 ]
 
 
