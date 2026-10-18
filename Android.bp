@@ -23,3 +23,10 @@ install_symlink {
     symlink_target: "/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
 }
 
+prebuilt_hidl_interfaces {
+    name: "hidl_vpp_interface_sm8250",
+    interfaces: [
+        "vendor.qti.hardware.vpp@1.4::IHidlVppService",
+    ],
+}
+
