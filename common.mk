@@ -318,7 +318,9 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
+    keymaster \
     media \
+    overlay \
     perf \
     telephony \
     usb \
