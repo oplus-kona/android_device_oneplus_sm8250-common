@@ -29,6 +29,7 @@ namespace_imports = [
     'device/oneplus/sm8250-common',
     'hardware/oplus',
     'vendor/qcom/common/vendor/adreno/r',
+    'vendor/qcom/common/vendor/display',
 ]
 
 
