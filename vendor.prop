@@ -114,7 +114,6 @@ persist.vendor.qcom.bluetooth.soc=hastings
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
-persist.vendor.btstack.enable.lpa=true
 
 # Camera
 persist.vendor.camera.logInfoMask=false
@@ -135,7 +134,7 @@ vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_scaler=0
 vendor.display.disable_system_load_check=1
-vendor.display.enable_async_powermode=1
+vendor.display.enable_async_powermode=0
 vendor.display.enable_camera_smooth=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
@@ -167,28 +166,14 @@ persist.sys.fuse.passthrough.enable=true
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
-debug.sf.early.app.duration.120=11666666
-debug.sf.early.app.duration.60=16666666
-debug.sf.early.app.duration=13666666
-debug.sf.early.sf.duration.120=12333333
-debug.sf.early.sf.duration.60=15666666
-debug.sf.early.sf.duration=10500000
-debug.sf.earlyGl.app.duration.120=11666666
-debug.sf.earlyGl.app.duration.60=16666666
-debug.sf.earlyGl.app.duration=13666666
-debug.sf.earlyGl.sf.duration.120=12333333
-debug.sf.earlyGl.sf.duration.60=15666666
-debug.sf.earlyGl.sf.duration=10500000
-debug.sf.late.app.duration.120=11666666
-debug.sf.late.app.duration.60=16666666
-debug.sf.late.app.duration=13666666
-debug.sf.late.sf.duration.120=12333333
-debug.sf.late.sf.duration.60=15666666
-debug.sf.late.sf.duration=10500000
-debug.sf.use_phase_offsets_as_durations=1
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=0
+debug.sf.enable_advanced_sf_phase_offset=1
+debug.sf.enable_gl_backpressure=1
 debug.sf.enable_transaction_tracing=false
+debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
+debug.sf.high_fps_early_phase_offset_ns=-4000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
 debug.sf.predict_hwc_composition_strategy=0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
@@ -219,10 +204,9 @@ debug.stagefright.c2inputsurface=-1
 ro.netflix.bsp_rev=Q8250-19134-1
 
 # Qualcomm System Daemon
-persist.vendor.qcomsysd.enabled=0
+persist.vendor.qcomsysd.enabled=1
 
 # Radio
-persist.vendor.mdm_helper.fail_action=retry
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.enableadvancedscan=true

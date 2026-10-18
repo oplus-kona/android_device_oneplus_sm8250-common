@@ -5,11 +5,7 @@
 
 soong_namespace {
     imports: [
-        "hardware/google/interfaces",
-        "hardware/google/pixel/pixelstats",
-        "hardware/google/pixel/power-libperfmgr",
         "hardware/oplus",
-        "vendor/qcom/opensource/usb/etc",
     ],
 }
 
@@ -26,3 +22,4 @@ install_symlink {
     installed_location: "firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini",
     symlink_target: "/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
 }
+
