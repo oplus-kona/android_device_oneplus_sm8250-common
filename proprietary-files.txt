@@ -956,6 +956,8 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Vibrator
+odm/etc/aac_richtap.config
+odm/lib64/libaacvibrator.so:vendor/lib64/libaacvibrator.so
 
 # Vibrator firmware
 odm/firmware/100ms_RTP.bin
