@@ -28,6 +28,7 @@ from extract_utils.utils import (
 namespace_imports = [
     'device/oneplus/sm8250-common',
     'hardware/oplus',
+    'vendor/qcom/common/system/alarm',
     'vendor/qcom/common/vendor/adreno/r',
     'vendor/qcom/common/vendor/display',
 ]
@@ -97,8 +98,6 @@ blob_fixups: blob_fixups_user_type = {
         .call(blob_fixup_nop_call, 'bl', '_ZN4pxlw18qcomSetDisplayModeEPvii', '_ZN4pxlw15irisSetConfigExEiiPKi@plt'),
     'odm/lib64/libpwirisservice.so': blob_fixup()
         .sig_replace('FD 7B BF A9 FD 03 00 91 00 44 40 F9', '00 00 80 52 C0 03 5F D6 1F 20 03 D5'),
-    'product/app/PowerOffAlarm/PowerOffAlarm.apk': blob_fixup()
-        .apktool_patch('blob-patches/PowerOffAlarm.patch'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
     'system/framework/WfdCommon.jar': blob_fixup()
