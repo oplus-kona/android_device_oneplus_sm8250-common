@@ -323,6 +323,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     alarm \
     audio \
     av \
+    bt \
     display \
     gps \
     init \
