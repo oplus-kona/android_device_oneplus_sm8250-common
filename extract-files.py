@@ -11,6 +11,7 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
+    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -29,10 +30,14 @@ namespace_imports = [
     'device/oneplus/sm8250-common',
     'hardware/oplus',
     'vendor/qcom/common/system/alarm',
+    'vendor/qcom/common/system/display',
+    'vendor/qcom/common/system/telephony',
     'vendor/qcom/common/system/wfd',
     'vendor/qcom/common/vendor/adreno/r',
     'vendor/qcom/common/vendor/display',
+    'vendor/qcom/common/vendor/display/4.19',
     'vendor/qcom/common/vendor/gps-legacy',
+    'vendor/qcom/common/vendor/keymaster',
     'vendor/qcom/common/vendor/media/legacy',
 ]
 
@@ -43,10 +48,13 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    'libsdmcore': lib_fixup_remove,
     (
         'com.qti.stats.pdlib',
         'com.qualcomm.qti.dpm.api@1.0',
         'libmmosal',
+        'vendor.display.color@1.4',
+        'vendor.display.color@1.5',
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,

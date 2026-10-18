@@ -36,7 +36,10 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing
 
+AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
+ifeq ($(wildcard $(AUDIO_HAL_DIR)),)
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8250/audio
+endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -96,6 +99,9 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 
 # Display
+PRODUCT_PACKAGES += \
+    libsdedrm
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
@@ -191,12 +197,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
 # Overlays
-$(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
-$(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
+$(call inherit-product, hardware/oplus/overlay/overlay.mk)
 
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
+    AOSPAOnePlusKonaFrameworksOverlay \
+    AOSPAOnePlusKonaSystemUIOverlay \
     CarrierConfigResCommon \
     FrameworksResTarget \
     NcmTetheringOverlay \
@@ -212,6 +219,9 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Platform
+TARGET_BOARD_PLATFORM := kona
 
 
 # Sensors
@@ -236,12 +246,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/oplus \
-    hardware/google/interfaces \
-    hardware/google/pixel/pixelstats \
-    hardware/google/pixel/power-libperfmgr \
-    hardware/qcom/display \
-    hardware/qcom/media
+    hardware/oplus
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -258,10 +263,6 @@ $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.oplus
 
 # Update engine
 PRODUCT_PACKAGES += \
