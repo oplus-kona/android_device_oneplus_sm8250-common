@@ -130,11 +130,9 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
-vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_scaler=0
 vendor.display.disable_system_load_check=1
-vendor.display.enable_async_powermode=0
 vendor.display.enable_camera_smooth=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
@@ -219,17 +217,6 @@ ro.telephony.default_network=33,33
 persist.sys.assert.panic=false
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.sync_request=true
-
-# USB
-sys.usb.mtp.batchcancel=1
-vendor.usb.diag.func.name=diag
-vendor.usb.dpl.inst.name=dpl
-vendor.usb.qdss.inst.name=qdss
-vendor.usb.rmnet.func.name=gsi
-vendor.usb.rmnet.inst.name=rmnet
-vendor.usb.rndis.func.name=gsi
-vendor.usb.use_ffs_mtp=1
-vendor.usb.use_gadget_hal=1
 
 # WiFi
 wifi.aware.interface=wifi-aware0
