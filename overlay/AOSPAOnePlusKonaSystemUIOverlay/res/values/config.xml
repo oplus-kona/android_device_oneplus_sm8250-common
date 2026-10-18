@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021-2024 Paranoid Android
+
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Whether long press is required to activate keyguard quick affordance buttons -->
+    <bool name="config_keyguardQuickAffordanceRequiresLongPress">false</bool>
+
+</resources>
