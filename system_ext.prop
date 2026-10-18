@@ -16,7 +16,7 @@ log.tag.CHIUSECASE=ERROR
 # Display
 debug.hwui.skia_atrace_enabled=false
 debug.hwui.use_hint_manager=true
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 debug.sf.latch_unsignaled=0
 persist.sys.sf.color_saturation=1.0
 renderthread.skia.reduceopstasksplitting=true
@@ -32,7 +32,7 @@ dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.image-dex2oat-threads=8
 
 # DPM
-persist.vendor.dpm.feature=9
+persist.vendor.dpm.feature=11
 
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
