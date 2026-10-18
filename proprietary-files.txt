@@ -495,10 +495,7 @@ vendor/bin/xtwifi-inet-agent
 vendor/etc/cacert_location.pem
 vendor/etc/xtra_root_cert.pem
 vendor/lib64/libcacertclient.so
-vendor/lib64/libgps.utils.so
 vendor/lib64/libjnihelper.so
-vendor/lib64/libloc_core.so
-vendor/lib64/liblocation_api.so
 
 # Hotword Enrollment
 my_product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml
