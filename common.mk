@@ -352,7 +352,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     display \
     init \
-    perf
+    perf \
+    wfd
 
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
