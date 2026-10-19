@@ -556,9 +556,9 @@ odm/lib64/libpwirisIoctlWrapper.so
 odm/lib64/libpwirisPCS.so
 odm/lib64/libpwiriscalibrate.so
 odm/lib64/libpwirisfeature.so;MODULE_SUFFIX=_odm
-odm/lib64/libpwirishalwrapper.so;MODULE_SUFFIX=_odm
+odm/lib64/libpwirishalwrapper.so;MODULE_SUFFIX=_odm;DISABLE_CHECKELF
 odm/lib64/libpwirispq.so
-odm/lib64/libpwirisservice.so
+odm/lib64/libpwirisservice.so;DISABLE_CHECKELF
 odm/lib64/libpwirissoft.so
 odm/lib64/libpwsnapdragoncolor.so
 odm/lib64/libpwsoftirisPCS.so
@@ -566,7 +566,7 @@ odm/lib64/vendor.pixelworks.hardware.display@1.0.so
 odm/lib64/vendor.pixelworks.hardware.display@1.1.so
 odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
 vendor/lib64/libpwirisfeature.so
-vendor/lib64/libpwirishalwrapper.so
+vendor/lib64/libpwirishalwrapper.so;DISABLE_CHECKELF
 
 # Keymaster
 
