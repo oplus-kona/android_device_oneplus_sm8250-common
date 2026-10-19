@@ -97,6 +97,7 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
 KERNEL_DEFCONFIG := vendor/kona-perf_defconfig
 KERNEL_FRAGMENT_CONFIG := vendor/oplus.config
+KERNEL_CLANG_VERSION := r596125
 KERNEL_FULL_LLVM := true
 
 # Platform
