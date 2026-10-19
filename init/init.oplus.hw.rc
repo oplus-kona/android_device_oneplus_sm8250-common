@@ -18,3 +18,7 @@ on property:ro.boot.rf_version=14
 
 on property:ro.boot.rf_version=15
     setprop ro.boot.hardware.revision "NA"
+
+on fs
+    wait /dev/block/platform/soc/1d84000.ufshc
+    symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
