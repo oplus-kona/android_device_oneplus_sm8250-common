@@ -79,6 +79,8 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
+# Keep dmesg across a normal restart and enable pstore ftrace before
+# userspace (debugfs is restricted on user builds).
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
@@ -87,6 +89,8 @@ BOARD_KERNEL_CMDLINE := \
     loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
+    printk.always_kmsg_dump=1 \
+    pstore.ftrace=1 \
     reboot=panic_warm \
     service_locator.enable=1 \
     swiotlb=2048
