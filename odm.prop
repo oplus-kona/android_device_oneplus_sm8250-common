@@ -7,3 +7,8 @@ ro.vendor.qti.va_odm.support=1
 
 # Media
 ro.odm.build.media_performance_class=30
+
+# RichTap Haptics
+vendor.aac_richtap.device.path=/dev/awinic_haptic
+vendor.aac_richtap.config.path=/odm/etc/aac_richtap.config
+
