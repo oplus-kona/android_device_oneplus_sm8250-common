@@ -141,6 +141,13 @@
          keyboard vibration will follow config_defaultHapticFeedbackIntensity -->
     <integer name="config_defaultKeyboardVibrationIntensity">3</integer>
 
+    <!-- Indicating if keyboard vibration settings are supported -->
+    <bool name="config_keyboardVibrationSettingsSupported">true</bool>
+    <bool name="config_keyboardVibrationSettingsIntensitySupported">true</bool>
+
+    <!-- Indicating if ringtone vibration settings supported or not -->
+    <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
+
     <!-- Flag indicating whether the surfaceflinger has limited
          alpha compositing functionality in hardware.  If set, the window
          manager will disable alpha transformation in animations where not
@@ -153,5 +160,8 @@
 
     <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
     <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
+
+    <!-- Vibrator amplitude control: AW8697 via RichTap HAL supports gain control -->
+    <bool name="config_vibratorHasAmplitudeControl">true</bool>
 
 </resources>
