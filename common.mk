@@ -264,6 +264,7 @@ PRODUCT_PACKAGES += \
     OPlusFrameworksResCommon \
     OPlusSettingsResCommon \
     OPlusSystemUIResCommon \
+    TelephonyResTarget \
     WifiResTarget
 
 # Partitions
