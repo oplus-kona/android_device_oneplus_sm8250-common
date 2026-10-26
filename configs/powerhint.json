@@ -356,7 +356,7 @@
         "1",
         "0"
       ],
-      "DefaultIndex": 0,
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -507,6 +507,16 @@
       ],
       "DefaultIndex": 1,
       "ResetOnInit": true
+    },
+    {
+      "Name": "SURFACEFLINGER",
+      "Paths": [
+        "<AdpfConfig>:SURFACEFLINGER"
+      ],
+      "Values": [
+        "DISPLAY_PRI_0_120FPS"
+      ],
+      "Type": "Event"
     }
   ],
   "Actions": [
@@ -586,7 +596,7 @@
       "PowerHint": "GAME",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "5"
+      "Value": "2"
     },
     {
       "PowerHint": "GAME",
@@ -616,13 +626,13 @@
       "PowerHint": "GAME",
       "Node": "CPUBWMinFreq",
       "Duration": 0,
-      "Value": "9155"
+      "Value": "14236"
     },
     {
       "PowerHint": "GAME",
       "Node": "LLCCBWMinFreq",
       "Duration": 0,
-      "Value": "2597"
+      "Value": "6881"
     },
     {
       "PowerHint": "LOW_POWER",
@@ -1042,13 +1052,49 @@
       "PowerHint": "GAME",
       "Node": "BigLLCCLatMinFreq",
       "Duration": 0,
-      "Value": "9155"
+      "Value": "14236"
     },
     {
       "PowerHint": "GAME",
       "Node": "BigDDRLatMinFreq",
       "Duration": 0,
-      "Value": "2597"
+      "Value": "6881"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "BigDDRLatFloorMinFreq",
+      "Duration": 0,
+      "Value": "6881"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "L3LittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "1612800000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "L3BigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1612800000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "L3BigPlusClusterMinFreq",
+      "Duration": 0,
+      "Value": "1612800000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "GPUForceRailOn",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "GPUForceClkOn",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",
