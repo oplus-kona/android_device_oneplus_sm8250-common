@@ -715,6 +715,26 @@
   ],
   "Actions": [
     {
+      "PowerHint": "LAUNCH",
+      "Type": "MaskHint",
+      "Value": "INTERACTION"
+    },
+    {
+      "PowerHint": "GAME",
+      "Type": "MaskHint",
+      "Value": "INTERACTION"
+    },
+    {
+      "PowerHint": "GAME",
+      "Type": "MaskHint",
+      "Value": "LAUNCH"
+    },
+    {
+      "PowerHint": "GAME",
+      "Type": "MaskHint",
+      "Value": "EXPENSIVE_RENDERING"
+    },
+    {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "PowerHALMainState",
       "Duration": 0,
