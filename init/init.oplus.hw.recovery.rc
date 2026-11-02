@@ -1,0 +1,18 @@
+#
+# Copyright (C) 2024 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Pull the previous boot's crash logs out of pstore and the bootloader buffer
+# into /tmp as soon as recovery starts, before anything can touch them. adb
+# pull /tmp/pstore right after entering recovery gives the log of the boot
+# that just failed.
+on property:ro.bootmode=recovery
+    mkdir /tmp/pstore 0777
+    copy /sys/fs/pstore/console-ramoops-0 /tmp/pstore/console-ramoops-0
+    copy /sys/fs/pstore/dmesg-ramoops-0 /tmp/pstore/dmesg-ramoops-0
+    copy /sys/fs/pstore/dmesg-ramoops-1 /tmp/pstore/dmesg-ramoops-1
+    copy /sys/fs/pstore/ftrace-ramoops-0 /tmp/pstore/ftrace-ramoops-0
+    copy /proc/bootloader_log /tmp/pstore/xbl.log
+    chmod 0644 /tmp/pstore/*
