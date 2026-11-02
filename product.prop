@@ -1,7 +1,3 @@
-# ADPF
-debug.sf.enable_adpf_cpu_hint=true
-debug.hwui.use_hint_manager=true
-
 # Audio
 af.fast_track_multiplier=1
 
