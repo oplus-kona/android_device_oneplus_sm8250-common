@@ -725,39 +725,15 @@
     },
     {
       "Name": "SCHED_QOS_NONE",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "UClampLatencySensitive",
-            "Value": "0"
-          }
-        }
-      ]
+      "Actions": []
     },
     {
       "Name": "SCHED_QOS_SENSITIVE_STANDARD",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "UClampLatencySensitive",
-            "Value": "1"
-          }
-        }
-      ]
+      "Actions": []
     },
     {
       "Name": "SCHED_QOS_SENSITIVE_EXTREME",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "UClampLatencySensitive",
-            "Value": "1"
-          }
-        }
-      ]
+      "Actions": []
     },
     {
       "Name": "PreferHighCapSet",
@@ -787,13 +763,6 @@
             "Name": "UClampMin",
             "Value": "0"
           }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "UClampLatencySensitive",
-            "Value": "1"
-          }
         }
       ]
     },
@@ -813,13 +782,6 @@
             "Name": "UClampMin",
             "Value": "15"
           }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "UClampLatencySensitive",
-            "Value": "1"
-          }
         }
       ]
     },
@@ -837,13 +799,6 @@
           "Name": "SetAttribute",
           "Params": {
             "Name": "UClampMin",
-            "Value": "0"
-          }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "UClampLatencySensitive",
             "Value": "0"
           }
         }
