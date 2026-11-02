@@ -16,3 +16,9 @@ on property:ro.bootmode=recovery
     copy /sys/fs/pstore/ftrace-ramoops-0 /tmp/pstore/ftrace-ramoops-0
     copy /proc/bootloader_log /tmp/pstore/xbl.log
     chmod 0644 /tmp/pstore/*
+
+# Snapshot the kernel kept on persist, which survives a power-off that took
+# DRAM with it.
+on property:ro.bootmode=recovery
+    copy /proc/last_kmsg /tmp/pstore/last_kmsg.txt
+    chmod 0644 /tmp/pstore/last_kmsg.txt
