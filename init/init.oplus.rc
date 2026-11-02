@@ -72,6 +72,12 @@ on property:ro.boot.prjname=*
     setprop ro.separate.soft ${ro.boot.prjname}
 
 on post-fs-data
+    # Kernel log snapshots, written before userspace comes up. persist is
+    # not wiped by a data wipe, unlike /data.
+    mkdir /mnt/vendor/persist/klog 0770 system system
+    chown system system /mnt/vendor/persist/klog
+    chmod 0770 /mnt/vendor/persist/klog
+
     mkdir /data/misc/logs 0770 system log
     mkdir /data/misc/logs/klog 0770 system log
     chown system log /data/misc/logs/klog

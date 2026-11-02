@@ -47,6 +47,13 @@ if [ -r /proc/bootloader_log ]; then
     cat /proc/bootloader_log > "$prev/xbl.log" 2>/dev/null
 fi
 
+# Snapshot the kernel wrote to persist before the previous boot died, even if
+# it was a power-off that took DRAM with it. Located before persist/klog is
+# overwritten by this boot's flush.
+if [ -r /proc/last_kmsg ]; then
+    cat /proc/last_kmsg > "$prev/last_kmsg.txt" 2>/dev/null
+fi
+
 dmesg > "$prev/dmesg.txt" 2>/dev/null
 
 # Compress the older snapshots, keep the current boot's logs plain.
