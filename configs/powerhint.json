@@ -511,7 +511,7 @@
     {
       "Name": "ADPFProfileApp",
       "Paths": [
-        "<AdpfConfig>:com.android.app"
+        "<AdpfConfig>:DEFAULT"
       ],
       "Values": [
         "REFRESH_120HZ",
@@ -526,7 +526,7 @@
     {
       "Name": "ADPFProfileSurfaceFlinger",
       "Paths": [
-        "<AdpfConfig>:com.android.surfaceflinger"
+        "<AdpfConfig>:SURFACEFLINGER"
       ],
       "Values": [
         "REFRESH_120HZ",
@@ -541,7 +541,7 @@
     {
       "Name": "ADPFProfileHwui",
       "Paths": [
-        "<AdpfConfig>:com.android.hwui"
+        "<AdpfConfig>:HWUI"
       ],
       "Values": [
         "REFRESH_120HZ",
@@ -556,7 +556,7 @@
     {
       "Name": "ADPFProfileSystemUi",
       "Paths": [
-        "<AdpfConfig>:com.android.systemui"
+        "<AdpfConfig>:SYSTEM_UI"
       ],
       "Values": [
         "REFRESH_120HZ",
@@ -576,7 +576,7 @@
       "Values": [
         "0",
         "2",
-        "4"
+        "3"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true,
@@ -1551,7 +1551,7 @@
       "PowerHint": "GAME",
       "Node": "CoreCtlBigMinCpus",
       "Duration": 0,
-      "Value": "4"
+      "Value": "3"
     },
     {
       "PowerHint": "GAME",
