@@ -71,7 +71,16 @@ on property:ro.boot.prjname=*
     # Display
     setprop ro.separate.soft ${ro.boot.prjname}
 
+on post-fs-data
+    mkdir /data/misc/logs 0770 system log
+    mkdir /data/misc/logs/klog 0770 system log
+    chown system log /data/misc/logs/klog
+    chmod 0770 /data/misc/logs/klog
+
 on property:sys.boot_completed=1
+    start persist-logs
+    start logcat-file
+
     # Power HAL
     setprop vendor.powerhal.init 1
 
@@ -115,6 +124,23 @@ service oplus-sh /odm/bin/init.oplus.sh
     user root
     group root
     oneshot
+
+# Copy the previous boot's pstore/bootloader logs to /data before the ring is
+# overwritten, so a clean install that hung or powered off can still be read.
+service persist-logs /vendor/bin/persist-logs.sh
+    user system
+    group log system
+    oneshot
+    disabled
+
+# Rolling logcat on disk, so a hang in userspace leaves a trace that does not
+# need adb. logd owns /data/misc/logd, so this writes there and the pstore
+# snapshot above stays kernel-only.
+service logcat-file /system/bin/logcat -b all -f /data/misc/logd/logcat.log -r 4096 -n 4
+    user log
+    group log system
+    oneshot
+    disabled
 
 service oplus_sensor_fb /odm/bin/oplus_sensor_fb
     user system

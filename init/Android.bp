@@ -26,7 +26,7 @@ prebuilt_etc {
 
 prebuilt_etc {
     name: "init.oplus.hw.recovery.rc",
-    src: "init.oplus.hw.rc",
+    src: "init.oplus.hw.recovery.rc",
     sub_dir: "init",
     recovery: true,
 }
@@ -93,5 +93,11 @@ sh_binary {
 sh_binary {
     name: "init.qcom.sh",
     src: "init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "persist-logs.sh",
+    src: "persist-logs.sh",
     vendor: true,
 }
