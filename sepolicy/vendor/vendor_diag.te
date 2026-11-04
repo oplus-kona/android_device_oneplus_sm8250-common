@@ -1,0 +1,9 @@
+# The Qualcomm SELinux umbrella grants diag access to these domains only under
+# userdebug_or_eng(), so a user build denies them. The vendor blobs still open
+# /dev/diag at runtime and retry in a tight loop on failure, which floods the
+# audit log (audit_lost>0) and starves real denials of audit records.
+diag_use(hal_sensors_default)
+diag_use(vendor_sensors_qti)
+diag_use(vendor_ims)
+
+allow rild vendor_diag_device:chr_file rw_file_perms;
