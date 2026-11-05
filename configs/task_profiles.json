@@ -761,7 +761,7 @@
           "Name": "SetAttribute",
           "Params": {
             "Name": "UClampMin",
-            "Value": "0"
+            "Value": "40"
           }
         }
       ]
@@ -780,7 +780,7 @@
           "Name": "SetAttribute",
           "Params": {
             "Name": "UClampMin",
-            "Value": "15"
+            "Value": "50"
           }
         }
       ]
@@ -793,6 +793,25 @@
           "Params": {
             "Controller": "cpu",
             "Path": "foreground"
+          }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params": {
+            "Name": "UClampMin",
+            "Value": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ADPF_POWER_SAVE",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params": {
+            "Controller": "cpu",
+            "Path": "top-app"
           }
         },
         {
