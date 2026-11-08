@@ -5744,6 +5744,9 @@ case "$target" in
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
 
+	# Set the RT uclamp baseline on the scheduler's 0..1024 scale.
+	echo 128 > /proc/sys/kernel/sched_util_clamp_min_rt_default
+
 	# configure governor settings for silver cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 	echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
