@@ -315,7 +315,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/oneplus/aidl/face \
-    hardware/oplus
     hardware/oplus \
     hardware/google/interfaces \
     hardware/google/pixel/pixelstats \
