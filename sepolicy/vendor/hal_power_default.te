@@ -1,5 +1,8 @@
+# ADPF updates app threads across per-app MLS categories.
+typeattribute hal_power_default mlstrustedsubject;
+
 # Allow hal_power_default to set scheduling attributes and uclamp for ADPF
-allow hal_power_default self:capability sys_nice;
+allow hal_power_default self:global_capability_class_set sys_nice;
 allow hal_power_default appdomain:process { getsched setsched };
 # getsched is needed to read the target policy before writing uclamp: the
 # kernel rejects a zero priority on an RT thread, and set_uclamp() has to
